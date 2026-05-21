@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* PARTICLES */
+
+.particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particles span {
+  position: absolute;
+  bottom: -120px;
+  width: 4px;
+  height: 4px;
+  background: #ff2b2b;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ff2b2b;
+  animation: particleFloat linear infinite;
+}
+
+.particles span:nth-child(1) {
+  left: 10%;
+  animation-duration: 12s;
+}
+
+.particles span:nth-child(2) {
+  left: 25%;
+  animation-duration: 18s;
+}
+
+.particles span:nth-child(3) {
+  left: 40%;
+  animation-duration: 14s;
+}
+
+.particles span:nth-child(4) {
+  left: 60%;
+  animation-duration: 20s;
+}
+
+.particles span:nth-child(5) {
+  left: 75%;
+  animation-duration: 15s;
+}
+
+.particles span:nth-child(6) {
+  left: 90%;
+  animation-duration: 17s;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+.particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.particles span {
+  position: absolute;
+  bottom: -120px;
+  width: 4px;
+  height: 4px;
+  background: #ff2b2b;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ff2b2b;
+  animation: floatUp linear infinite;
+}
+
+.particles span:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.particles span:nth-child(2) {
+  left: 25%;
+  animation-duration: 12s;
+}
+
+.particles span:nth-child(3) {
+  left: 40%;
+  animation-duration: 10s;
+}
+
+.particles span:nth-child(4) {
+  left: 60%;
+  animation-duration: 14s;
+}
+
+.particles span:nth-child(5) {
+  left: 75%;
+  animation-duration: 9s;
+}
+
+.particles span:nth-child(6) {
+  left: 90%;
+  animation-duration: 13s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
