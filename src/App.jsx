@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 export default function MetallFactureSite() {
+  const [selectedProject, setSelectedProject] = useState(null);
   const handleTelegramSubmit = async (e) => {
     e.preventDefault();
 
@@ -74,19 +76,22 @@ export default function MetallFactureSite() {
       title: 'Промышленные очистные сооружения',
       area: '1 500 м²',
       image:
-        '/images/oches.jpg'
+        '/images/oches.jpg',
+        description: 'Производство и монтаж 170 тонн металлоконструкций, поставка и монтаж 2700 м2 сэндвич-панелей, постака и монтаж 1570м2 профнастила.'
     },
     {
       title: 'Склад продукции г.Санкт-Петербург',
       area: '650 м²',
       image:
-        '/images/npo.jpg'
+        '/images/npo.jpg',
+        description: 'Разработка чертежей КМД, производство и поставка 67 тонн металлоконструкций здания склада готовой продукции.'
     },
     {
       title: 'Проект Монплезир г.Москва',
       area: '790 м²',
       image:
-        '/images/monplez.jpg'
+        '/images/monplez.jpg',
+        description: 'Разработка чертежей КМД, производство и поставка и монтаж 42 тонн металлоконструкций здания Зимнего сада.'
     }
   ]
 
@@ -735,9 +740,12 @@ export default function MetallFactureSite() {
                       {project.title}
                     </div>
 
-                    <button className="border border-white/20 hover:border-red-500 hover:bg-red-500/10 transition-all duration-300 px-7 py-4 rounded-2xl text-lg font-semibold backdrop-blur-md">
-                      Смотреть кейс
-                    </button>
+                    <button
+  onClick={() => setSelectedProject(project)}
+  className="bg-red-600 hover:bg-red-500 transition px-6 py-4 rounded-2xl font-bold"
+>
+  Смотреть кейс
+</button>
                   </div>
                 </div>
               ))}
@@ -1124,6 +1132,42 @@ export default function MetallFactureSite() {
           ↑
         </a>
       </div>
+      {selectedProject && (
+  <div className="fixed inset-0 bg-black/80 z-[999] flex items-center justify-center p-6">
+
+    <div className="bg-[#111] max-w-5xl w-full rounded-[30px] overflow-hidden relative max-h-[90vh] overflow-y-auto">
+
+      <button
+        onClick={() => setSelectedProject(null)}
+        className="absolute top-5 right-5 bg-red-600 w-12 h-12 rounded-full text-2xl"
+      >
+        ×
+      </button>
+
+      <img
+        src={selectedProject.image}
+        alt=""
+        className="w-full h-[420px] object-cover"
+      />
+
+      <div className="p-10">
+
+        <h2 className="text-5xl font-black mb-5">
+          {selectedProject.title}
+        </h2>
+
+        <div className="text-red-500 text-2xl mb-6">
+          {selectedProject.area}
+        </div>
+
+        <p className="text-gray-300 text-xl leading-relaxed">
+          {selectedProject.description}
+        </p>
+
+      </div>
+    </div>
+  </div>
+)}
       </>
   )
 }
