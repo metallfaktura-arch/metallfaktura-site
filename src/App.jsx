@@ -76,7 +76,7 @@ export default function MetallFactureSite() {
       title: 'Промышленные очистные сооружения',
       area: '1 500 м²',
       image:
-        '/images/oches.jpg',
+        '/images/oches1.jpg',
         description: 'Производство и монтаж 170 тонн металлоконструкций, поставка и монтаж 2700 м2 сэндвич-панелей, постака и монтаж 1570м2 профнастила.'
     },
     {
