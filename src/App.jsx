@@ -505,7 +505,7 @@ export default function MetallFactureSite() {
         controls
         className="w-full h-auto"
       >
-        <source src="/videos/production.mp4" type="video/mp4" />
+        <source src="/video/production.mp4" type="video/mp4" />
       </video>
 
     </div>
