@@ -700,37 +700,7 @@ export default function MetallFactureSite() {
             </div>
           </div>
         </section>
-<section className="py-24 bg-black relative overflow-hidden">
-  <div className="container mx-auto px-6">
 
-    <div className="text-center mb-12">
-      <h2 className="text-5xl font-black mb-4">
-        Собственное производство
-      </h2>
-
-      <p className="text-gray-400 max-w-3xl mx-auto text-xl">
-        Производственный цех, изготовление металлоконструкций,
-        контроль качества и подготовка изделий к монтажу.
-      </p>
-    </div>
-
-    <div className="rounded-[32px] overflow-hidden border border-red-900/30 shadow-2xl">
-
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls
-        className="w-full h-auto"
-      >
-        <source src="/videos/production.mp4" type="video/mp4" />
-      </video>
-
-    </div>
-
-  </div>
-</section>
         <section id="projects" className="py-28 bg-[#05080D] border-y border-white/10 overflow-hidden">
           <div className="max-w-[1680px] mx-auto px-10">
             <div className="flex items-end justify-between gap-10 mb-16">
